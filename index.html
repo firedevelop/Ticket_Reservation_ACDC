@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC&#9889DC</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>AC<span class="ray">&#9889</span>DC</h1>
+    </header>
+
+    <!-- Descripción del Grupo -->
+    <section>
+        <h2>Descripción del Grupo</h2>
+        <div class="hover14 column">
+            <figure>
+                <img src="img/grupo.jpeg" alt="ACDC" class="image">
+            </figure>
+        </div> 
+        <p>AC<span class="ray">&#9889</span>DC, la banda australiana que puso el rock and roll en el mapa mundial, ha dejado una huella
+            imborrable en la cultura popular. Canciones como 'Whole Lotta Rosie', 'For Those About to Rock' y 'Shoot to
+            Thrill' se han convertido en himnos generacionales, acompañando a millones de fans en sus momentos más
+            memorables. Su influencia se extiende más allá de la música, con apariciones en películas y videojuegos que
+            han consolidado su estatus de leyenda.</p>
+    </section>
+
+    <!-- Tabla con las fechas de los conciertos -->
+    <section>
+        <h2>Fechas de Conciertos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Lugar</th>
+                    <th>Hora</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>10 Enero 2025</th>
+                    <th>Auditorio Nacional</th>
+                    <th>20h.</th>
+                    <th>60&euro;</th>
+                </tr>
+                <tr>
+                    <th>25 Enero 2025</th>
+                    <th>Estadio Metropolitano</th>
+                    <th>21h.</th>
+                    <th>150&euro;</th>
+                </tr>
+                <tr>
+                    <th>10 Febrero 2025</th>
+                    <th>Pabellón Municipal</th>
+                    <th>18h.</th>
+                    <th>&pound;110</th>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Formulario de compra de entradas -->
+    <section id="compra-entradas">
+        <h2>Compra de Entradas</h2>
+        <form action="confirmacion.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="fecha">Fecha del Concierto:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="lugar">Lugar del Concierto:</label>
+            <select id="lugar" name="lugar" required>
+                <option value="madrid">Madrid - Estadio Santiago Bernabéu</option>
+                <option value="barcelona">Barcelona - Palau Sant Jordi</option>
+                <option value="londres">Londres - Wembley Stadium</option>
+            </select>
+
+            <label for="cantidad">Cantidad de Entradas:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="5" required>
+
+            <fieldset>
+                <legend>Método de Pago:</legend>
+                <div class="payment">
+                    <label>
+                        <input type="radio" id="visa" name="pago" value="visa-mastercard" required>
+                        <img src="img/visa.png" alt="Visa Mastercard" class="icono-pago">Visa/Mastercard
+                    </label>
+                    <label>
+                        <input type="radio" id="bizum" name="pago" value="bizum" required>
+                        <img src="img/bizum.jpg" alt="Bizum" class="icono-pago">Bizum
+                    </label>
+                    <label>
+                        <input type="radio" id="paypal" name="pago" value="paypal" required>
+                        <img src="img/paypal.png" alt="PayPal" class="icono-pago">PayPal
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2024 AC<span class="ray">&#9889</span>DC. Todos los derechos reservados</p>
+        <p>3wschools: <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML tags</a> | <a
+            href="https://www.w3schools.com/css/default.asp" target="_blank">CSS tags</a> | <a
+            href="https://www.w3schools.com/css/css3_variables.asp" target="_blank">Paleta de colores</a> | <a
+            href="https://www.w3schools.com/html/html_table_styling.asp" target="_blank">Hoverable Table</a></p>
+            <p>Efectos: <a href="https://codepen.io/nxworld/pen/ZYNOBZ" target="_blank">Brillo imagen</a> | Wikipedia: <a href="https://es.wikipedia.org/wiki/AC/DC" target="_blank">Descripción del Grupo</a>
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+            <img alt="CC BY-SA 4.0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" />
+        </a>
+    </p>
+</footer>
+</body>
+
+</html>

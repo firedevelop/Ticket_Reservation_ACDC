@@ -1,0 +1,237 @@
+/**** PALETA DE COLORES /****
+:root permite usar los mismos colores en todo el proyecto.
+Incluye nombres fáciles de recordar, y los colores de clases y del background con nombres separados para evitar confusiones y aportar claridad. */
+
+:root {
+    --red-darkest: #1D0201;
+    --red-dark: #D11F09;
+    --green: #5cb85c;
+    --green-light: #4cae4c;
+}
+
+/* Colores para clases */
+.red-darkest {
+    color: var(--red-darkest);
+}
+
+.red-dark {
+    color: var(--red-dark);
+}
+
+.green {
+    color: var(--green);
+}
+
+.green-light {
+    color: var(--green-light);
+}
+
+
+/* Colores para background */
+.background-red-darkest {
+    color: var(--red-darkest);
+}
+
+.background-red-dark {
+    color: var(--red-dark);
+}
+
+.background-red {
+    color: var(--red);
+}
+
+.background-light {
+    color: var(--red-ligth);
+}
+
+
+/**** REQUISITO 1: fuentes /****
+El formulario tiene tres agrupaciones de elementos de entrada. Los encabezados
+de las agrupaciones usan el tipo de letra Verdana y el resto del texto usan el tipo
+de letra Calibri.  */
+
+label, legend{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input, select, button{
+    font-family: Calibri, sans-serif;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+/**** REQUISITO 2: Fuente y Márgenes. Color de Fondo ****/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+/**** REQUISITO 2: Título de la Página ****/
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+
+/**** REQUISITO 3: Secciones ****/
+
+section {
+    background-color: white;
+    margin: 4em;
+    padding: 1.5em;
+    box-shadow: 0px 0px 10px #00000011; /* negro con un 11% de opacidad */
+}
+
+
+/**** REQUISITO 4: Imágenes del Grupo ****/
+
+img {
+    max-width: 100%; 
+}
+
+
+/**** REQUISITO 5: Tabla de Fechas de Conciertos ****/
+
+table {
+    width:100%;
+    border-collapse: collapse; /* evita la doble linea en la tabla */
+}
+th, td{
+    text-align: left; /* texto alineado */
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-weight: normal;
+}
+
+thead th{
+    background-color:#333;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background-color: #f2f2f2; /* Light gray background on hover */
+    cursor: pointer;
+}
+
+
+/**** REQUISITO 6: Formularios ****/
+
+label, fieldset, button
+ {
+    display: block; /* cada elemento en una linea */
+    width: 50%; /* Ancho ajustado para los campos de entrada */
+    max-width: 300px;
+    margin-top: 15px; /* Separación entre campos */
+}
+
+
+/**** REQUISITO 7: Métodos de Pago ****/
+
+.payment {
+    display: flex; 
+    flex-direction: column; /* elementos alineados como una columna*/
+}
+
+.payment label {
+    display: flex;
+    align-items: center; /* texto e iconos alineación */
+    margin-bottom: 10px;
+}
+
+.icono-pago
+ {
+    width: 40px; /* tamaño icono */
+
+    padding-right: 10px;
+}
+
+
+/**** REQUISITO 8: Botón de Pago ****/
+
+button {
+    padding: 25px; /* espacio interno alrededor del texto */
+    background-color:var(--green); /* Color de fondo */
+    color: white; /* Color de texto */
+    font-size: 1em; /* Tamaño de texto el doble del tamaño base */
+    border: none;  /* sin bordes */
+    cursor: pointer; 
+}
+button:hover{
+    background-color: var(--green-light);
+}
+
+
+/**** REQUISITO 9: Pie de Página (Footer) ****/
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+}
+
+footer a {
+    color: var(--green); /* Change to any color you like */
+    text-decoration: none; /* Removes underline, optional */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Optional: color on hover */
+}
+
+
+
+/**** EXTRA: EFFECTO CSS REFLEJO SOBRE IMAGEN /****
+/* Shine */
+.hover14 figure {
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
+/* ray */
+.ray {
+    margin-left: -5px; /* Adjust this value to bring the bolt closer to "C" */
+    margin-right: -5px; /* Adjust this value to bring the bolt closer to "D" */
+}
